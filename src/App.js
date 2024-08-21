@@ -1,12 +1,18 @@
-import React from "react";
-import Login from "./components/login/login.jsx"; // Ajusta la ruta si es necesario
+// App.js
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Login from './components/forms/login';
+import Register from './components/forms/register';
 
-function App() {
+const App = () => {
   return (
-    <div>
-      <Login />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/login" component={Login} />
+        <Route path="/register" component={Register} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
